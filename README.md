@@ -12,4 +12,4 @@ The letter "B" is represented by "-..."
 The number "1" is represented by ".----"
 These signals can be transmitted as electrical pulses, light flashes, sound beeps, or other means. The receiver decodes the sequence of dots and dashes back into readable text.
 
-The simplicity and efficiency of Morse code made it widely used in maritime communication, aviation, and emergency signaling for many decades.
+The simplicity and efficiency of Morse code made it widely used in maritime communication, aviation, and emergency signaling for many decades

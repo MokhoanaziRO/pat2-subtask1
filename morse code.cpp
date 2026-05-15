@@ -29,4 +29,34 @@ int main() {
     }
 
     cout << "\nMorse Code Translation:\n";
+    // Output each letter with its Morse code
+    for (char c : input) {
+        if (morseCode.find(c) != morseCode.end()) {
+            if (c != ' ') {
+                cout << c << ": " << morseCode[c] << endl;
+            } else {
+                cout << endl; // Blank line for space between words
+            }
+        } else {
+            cout << c << ": (unknown)" << endl; // For unsupported characters
+        }
+    }
+
+    // Output full Morse code message with spaces between letters
+    cout << "\nFull Morse Code Message:\n";
+    for (size_t i = 0; i < input.length(); ++i) {
+        char c = input[i];
+        if (morseCode.find(c) != morseCode.end()) {
+            cout << morseCode[c];
+            if (c != ' ') {
+                cout << "   "; // 3 spaces between letters
+            } else {
+                cout << "       "; // 7 spaces between words
+            }
+        }
+    }
+    cout << endl;
+return 0;
+}
+
 

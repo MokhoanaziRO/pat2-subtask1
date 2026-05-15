@@ -18,3 +18,15 @@ map<char, string> morseCode = {
 
     return 0;
 }
+int main() {
+    string input;
+    cout << "Enter a message in English (max 42 characters): ";
+    getline(cin, input);
+
+    // Convert input to uppercase
+    for (char &c : input) {
+        c = toupper(c);
+    }
+
+    cout << "\nMorse Code Translation:\n";
+

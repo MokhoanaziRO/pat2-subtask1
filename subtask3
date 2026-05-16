@@ -1,0 +1,41 @@
+ #include <iostream>
+using namespace std;
+
+const int NUM_EXPERIMENTS = 3;
+const int NUM_READINGS = 5;
+
+int main() {
+    char l = '1';
+    double readingValue, total, average;
+
+    for (int i = 1; i <= NUM_EXPERIMENTS; i++) {
+        total = 0;
+        cout << "Experiment " << i << endl;
+        cout << "--------------------" << endl;
+
+        for (int j = 1; j <= NUM_READINGS; j++) {
+            cout << "Enter reading " << j << " value: ";
+            cin >> readingValue;
+            total += readingValue;
+        }
+
+        average = total / NUM_READINGS;
+
+        // Incorporate outputation logic directly
+        if (average < 100) {
+            cout << "Experiment " << i << " average is " << average
+                 << " - Failed to meet the precision." << endl;
+        }
+        else if (average >= 100 && average <= 200) {
+            cout << "Experiment " << i << " average is " << average
+                 << " - Passed the precision test." << endl;
+        }
+        else {
+            cout << "Experiment " << i << " average is " << average
+                 << " - Exceeded the precision expectations." << endl;
+        }
+    }
+
+    return 0;
+}
+
